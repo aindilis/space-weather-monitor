@@ -1,0 +1,13 @@
+[Unit]
+Description=Space Weather Alert Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/perl /usr/local/bin/space_weather_alert.pl
+Restart=on-failure
+User=nobody
+Group=nogroup
+
+[Install]
+WantedBy=multi-user.target
