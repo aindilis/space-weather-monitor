@@ -1,0 +1,29 @@
+Package: space-weather-alert
+Version: 1.0.0
+Architecture: all
+Maintainer: Andrew John Dougherty <adougher9@yahoo.com>
+Depends: perl (>= 5), libwww-mechanize-perl, libemail-sender-perl, libemail-simple-perl, libjson-perl, libnotify-bin, systemd, geocode2-demo
+Description: Space Weather Alert System
+ The Space Weather Alert System is a Perl script that fetches space weather data
+ from NOAA (National Oceanic and Atmospheric Administration) and sends notifications
+ to users when the threat level exceeds a certain threshold. The script is designed
+ to run as a systemd service on Debian 12 and can send notifications via desktop
+ notifications and email.
+ .
+ Features:
+ - Fetches space weather data from NOAA's 27-day outlook, 3-day forecast, and 3-day
+   geomagnetic forecast
+ - Parses the fetched data to extract relevant information
+ - Determines the overall threat level based on the parsed data
+ - Sends desktop notifications to logged-in users using `notify-send`
+ - Sends email notifications to users as a fallback
+ - Runs as a systemd service on a daily basis
+ .
+ This package depends on Perl 5 and the following Perl modules:
+ - WWW::Mechanize
+ - Email::Sender::Simple
+ - Email::Simple
+ - Email::Simple::Creator
+ .
+ It also requires the `notify-send` command for desktop notifications and systemd
+ for running the script as a service.

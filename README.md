@@ -79,7 +79,7 @@ Desktop notifications will be sent to logged-in users using `notify-send`, and e
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [GPL](LICENSE).
 
 ## Acknowledgements
 
